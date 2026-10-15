@@ -1,0 +1,23 @@
+.session-clock{border:1px solid var(--line);border-radius:16px;padding:16px 18px;margin:2px 0;min-width:0;background:var(--surface2)}
+.session-clock legend{font-size:.8rem;font-weight:600;line-height:1.6;padding:0 6px;color:var(--ink)}
+.session-clock legend span{font-weight:400;color:var(--muted);margin-left:5px;font-size:.7rem}
+.session-clock-fields{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:4px 0 14px}
+.session-clock-fields label{min-width:0;margin:0}.session-clock-fields input{min-width:0;width:100%;font-variant-numeric:tabular-nums}
+.session-clock>.checkbox-label{margin:0;font-size:.75rem;line-height:1.6;align-items:center}
+.session-clock-summary{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:12px}
+.session-clock-summary p{flex:1 1 220px;min-width:0;margin:0;color:var(--muted);font-size:.72rem;line-height:1.7}
+.session-clock-summary .is-error{color:var(--red,var(--ink))}.session-clock-summary button{flex:none;min-height:40px}.session-clock-summary button[hidden]{display:none}
+.session-clock-history{font-variant-numeric:tabular-nums;white-space:nowrap}
+.arrival-greeting-note{display:block;font-size:.66rem;line-height:1.6;margin-top:5px}
+/* Finite greeting on an existing asset: settle, wave, then return to rest. */
+.arrival-mascot .mascot-figure,.arrival-mascot .mascot-hand,.arrival-mascot .mascot-lid{animation:none!important}
+.arrival-greeting .arrival-mascot .mascot-figure{animation:norbit-arrive 850ms cubic-bezier(.22,1,.36,1) both!important}
+.arrival-greeting .arrival-mascot .mascot-hand-right{animation:norbit-hello 1100ms ease-in-out 120ms both!important}
+.arrival-greeting .arrival-mascot>span:last-child{animation:norbit-greeting-copy 600ms ease-out 180ms both}
+.arrival-greeting .arrival-preview{animation:norbit-preview-arrive 700ms cubic-bezier(.22,1,.36,1) 120ms both}
+@keyframes norbit-arrive{0%{opacity:0;transform:translateY(14px) scale(.93)}65%{opacity:1;transform:translateY(-3px) scale(1.015)}100%{opacity:1;transform:none}}
+@keyframes norbit-hello{0%,100%{transform:none}25%,60%{transform:rotate(-18deg)}42%,77%{transform:rotate(12deg)}}
+@keyframes norbit-greeting-copy{from{opacity:0;transform:translateX(-5px)}to{opacity:1;transform:none}}
+@keyframes norbit-preview-arrive{from{opacity:.5;transform:translateY(10px)}to{opacity:1;transform:none}}
+@media(max-width:400px){.session-clock{padding:14px 12px}.session-clock-fields{gap:10px}.session-clock-fields label{font-size:.75rem}}
+@media(prefers-reduced-motion:reduce){.arrival-greeting .arrival-mascot .mascot-figure,.arrival-greeting .arrival-mascot .mascot-hand-right,.arrival-greeting .arrival-mascot>span:last-child,.arrival-greeting .arrival-preview{animation:none!important}}

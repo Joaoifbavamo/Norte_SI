@@ -1,0 +1,28 @@
+{
+  "name": "norte-si-gemini",
+  "main": "index.js",
+  "compatibility_date": "2026-10-08",
+  "vars": {
+    "GEMINI_MODEL": "gemini-3.5-flash-lite",
+    "AI_DAILY_TOKEN_BUDGET": "1000000"
+  },
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "QUOTA",
+        "class_name": "StudyQuota"
+      }
+    ]
+  },
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_sqlite_classes": [
+        "StudyQuota"
+      ]
+    }
+  ],
+  "observability": {
+    "enabled": false
+  }
+}
