@@ -1,3 +1,11 @@
 # Norte SI
 
 App independente para estudantes de Sistemas de Informação do IFBA Vitória da Conquista e aprendizado livre. Base Norte 4.1.0 preservada. O aluno escolhe ofertas por semestre letivo e informa separadamente o período do curso; repetir disciplinas cria novos registros em outro espaço. Sem contas ou sincronização automática. Dados locais e backup manual. Matrizes do hub são referência provisória; resultados, faltas e aproveitamentos são informados pelo usuário. Backend Gemini separado, configurado por segredo, sem reaproveitar cota ou credenciais do Norte.
+
+## Atividades e leitura da NORBIT · 1.4.0
+
+Atividades por disciplina e visão de pendências entre espaços ativos. Registros antigos de avaliações e prazos aparecem sem migração destrutiva; enriquecimento mantém o mesmo identificador e sincroniza os campos originais. Detalhes, links HTTP(S), checklist, esforço, peso, nota e estados de entrega. Avisos em Hoje a até 72 horas do prazo, incluindo atrasos. Horários locais. Prioridade local disponível offline; a análise opcional envia um resumo de até 12 pendências, não os arquivos, e guarda a explicação na própria área. Sugestões não alteram a agenda.
+
+Anexos em IndexedDB, até 15 MB por arquivo, 10 por atividade e 100 MB armazenados no navegador. Não são sincronizados. O ZIP completo inclui registros e os anexos disponíveis; a restauração substitui os registros mediante confirmação. JSON comum e mesclagem de JSON incluem metadados, não os arquivos. Arquivos removidos da atividade são retidos localmente para preservar o desfazer. fflate é carregado somente ao usar ZIP, com licença incluída.
+
+Leitura de mensagens novas e antigas com Markdown limitado, HTML escapado, listas, tabelas e blocos de código copiáveis. Mensagens longas do usuário podem ser expandidas. Movimento reduzido respeitado. Tutorial inclui os fluxos novos e usa dados temporários.

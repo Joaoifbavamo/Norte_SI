@@ -1,9 +1,9 @@
 import { readFile, writeFile } from 'node:fs/promises';
 
 const root = new URL('../', import.meta.url);
-const modules = ['study-tools','practice','tutor-tools','studio-tour','arrival-bank','learning','advanced-bank','import-mapping','norbit-context','refreshed-tour','session-times','si-catalog','si-syllabi-data','si-academic','mochi-native','si-identity','mochi-context','si-topics','guided-session','study-refresh','study-transfer','study-labs','study-refresh-tour','next-core','next-backup','next-calendar','next-labs','next-ai','next-tour'];
+const modules = ['study-tools','practice','tutor-tools','studio-tour','arrival-bank','learning','advanced-bank','import-mapping','norbit-context','refreshed-tour','session-times','si-catalog','si-syllabi-data','si-academic','mochi-native','si-identity','mochi-context','si-topics','guided-session','study-refresh','study-transfer','study-labs','study-refresh-tour','next-core','next-backup','next-calendar','next-labs','next-ai','next-tour','chat-reading','coursework','coursework-files','coursework-tour'];
 const extraJS = (await Promise.all(modules.map(name=>readFile(new URL('src/'+name+'.js',root),'utf8')))).join('\n');
-const extraCSS = (await Promise.all(['studio','arrival-bank','connected','session-times','si-academic','si-identity','si-topics','study-refresh','next'].map(name=>readFile(new URL('src/'+name+'.css',root),'utf8')))).join('\n');
+const extraCSS = (await Promise.all(['studio','arrival-bank','connected','session-times','si-academic','si-identity','si-topics','study-refresh','next','coursework'].map(name=>readFile(new URL('src/'+name+'.css',root),'utf8')))).join('\n');
 const [template, css, js, favicon, aiJS, aiCSS, timerJS, timerCSS, profileJS, profileCSS, mascot, chatJS, motionJS, chatCSS, siteMotionJS, siteMotionCSS, enhancementsJS, enhancementsCSS] = await Promise.all([
   readFile(new URL('src/index.template.html', root), 'utf8'),
   readFile(new URL('src/styles.css', root), 'utf8'),

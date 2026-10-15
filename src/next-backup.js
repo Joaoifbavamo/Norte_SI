@@ -1,7 +1,7 @@
 /* Manual, additive merge: matching IDs identify records, never inferred deletions. */
 function nextEqual(a,b){const canonical=v=>Array.isArray(v)?v.map(canonical):v&&typeof v==='object'?Object.fromEntries(Object.keys(v).sort().map(k=>[k,canonical(v[k])])):v;return JSON.stringify(canonical(a))===JSON.stringify(canonical(b))}
 function nextBackupMerge(local,incoming,resolutions={}){
- validateBackup(local);validateBackup(incoming);const conflicts=[],counts={added:0,duplicates:0},atomic=new Set(['sessions','plans','cards','mistakes','resources','mockExams','bank','attempts','cache','reviewLog','messages','examPlans','attendance','calendar','verified','assessments','lessons','projects','activities','routines']);
+ validateBackup(local);validateBackup(incoming);const conflicts=[],counts={added:0,duplicates:0},atomic=new Set(['courseTasks','courseReports','sessions','plans','cards','mistakes','resources','mockExams','bank','attempts','cache','reviewLog','messages','examPlans','attendance','calendar','verified','assessments','lessons','projects','activities','routines']);
  function conflict(a,b,path,label){const key=path.join('/');conflicts.push({key,label:label||path.join(' → '),local:clone(a),incoming:clone(b)});return clone(resolutions[key]==='incoming'?b:a)}
  function merge(a,b,path=[],depth=0){if(depth>20)throw Error('O backup tem uma estrutura muito profunda.');if(nextEqual(a,b)){if(a?.id)counts.duplicates++;return clone(a)}if(a===undefined){counts.added++;return clone(b)}if(b===undefined)return clone(a);
   if(Array.isArray(a)&&Array.isArray(b)){
