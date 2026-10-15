@@ -9,3 +9,9 @@ Atividades por disciplina e visão de pendências entre espaços ativos. Registr
 Anexos em IndexedDB, até 15 MB por arquivo, 10 por atividade e 100 MB armazenados no navegador. Não são sincronizados. O ZIP completo inclui registros e os anexos disponíveis; a restauração substitui os registros mediante confirmação. JSON comum e mesclagem de JSON incluem metadados, não os arquivos. Arquivos removidos da atividade são retidos localmente para preservar o desfazer. fflate é carregado somente ao usar ZIP, com licença incluída.
 
 Leitura de mensagens novas e antigas com Markdown limitado, HTML escapado, listas, tabelas e blocos de código copiáveis. Mensagens longas do usuário podem ser expandidas. Movimento reduzido respeitado. Tutorial inclui os fluxos novos e usa dados temporários.
+
+## Navegação de atividades · 1.4.1
+
+Seção exclusiva Atividades e provas na barra lateral, com Pendentes, Provas, Entregues e Prioridades da NORBIT. Mesmos destinos na navegação do conteúdo para celular. Listas agrupadas por prazo, busca e disciplina visíveis; situação e espaço em filtros adicionais. Detalhes ocupam uma tela própria, com retorno mantendo os filtros. Cadastro mostra os campos essenciais primeiro e separa etapas, links e arquivos de esforço, situação e nota. Ao salvar, o registro abre para conferência. Ações rápidas permitem iniciar uma atividade, entregar ou marcar uma prova como realizada, com desfazer.
+
+Prioridades locais e análise da NORBIT ficam no destino próprio. O envio usa uma prévia legível e uma orientação opcional do aluno; o texto completo permanece consultável. Backup com anexos continua disponível em um grupo separado. Os registros e arquivos existentes mantêm seus formatos e identificadores.
