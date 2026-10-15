@@ -1,0 +1,19 @@
+function setupTourExample(step=0){setupDraft=setupFresh();Object.assign(setupDraft,{step,name:'João · exemplo',kind:'semester',spaceName:'Meu semestre · exemplo',goal:'Praticar SQL e acompanhar as disciplinas sem ocupar os dias de descanso.',term:'2026.2',matrix:'manual',period:2,customText:'Banco de Dados',subjects:[{...setupSubjectEntry('Banco de Dados'),topicsText:'SELECT\nJOIN',level:'learning',priority:5,focus:'SELECT',goalDate:addDays(today(),4)}],challenge:'practice'});setupDraft.availability[1].enabled=true;setupDraft.availability[3].enabled=true;setupDraft.availability[6].enabled=true;setupPreview=null;setupError='';setupAnimateStep=false;render()}
+const setupCaptureBefore=studyTourCapture;
+studyTourCapture=function(){return {...setupCaptureBefore(),setup:{draft:clone(setupDraft),preview:setupPreview,error:setupError,problem:setupDraftProblem,animate:setupAnimateStep}}};
+const setupRestoreBefore=studyTourRestore;
+studyTourRestore=function(saved){setupRestoreBefore(saved);if(saved?.setup){setupDraft=saved.setup.draft;setupPreview=saved.setup.preview;setupError=saved.setup.error;setupDraftProblem=saved.setup.problem;setupAnimateStep=saved.setup.animate}};
+tourAreas.comecar={label:'Seu primeiro plano',caption:'Nome, objetivo, disciplinas e uma semana possível',steps:[
+ tStep('#setup-companion','Um guia, não uma obrigação permanente.','A NORBIT acompanha cada etapa com o Mochi. Todas as respostas podem ser editadas depois. Este exemplo é temporário e não usa IA.',{onEnter:()=>setupTourExample(0)}),
+ tStep('#setup-name','Seu espaço usa seu nome.','O nome aparece nas boas-vindas e nas preferências. No site real, o rascunho é retomado neste navegador; nada é enviado à IA por responder ao guia.'),
+ tStep('.setup-choices','Seu objetivo dá a direção.','Escolha semestre, concurso ou estudo livre. Informe o objetivo e, quando houver, o prazo. Semestre letivo, período do curso e matriz são perguntas separadas.',{prepare:()=>setupTourExample(1)}),
+ tStep('.setup-catalogue','Modelos editáveis, matrícula escolhida por você.','Use o catálogo IFBA ou cadastre disciplinas manualmente. Modelos de programação, inglês e concurso são pontos de partida; confira e adapte os conteúdos.',{prepare:()=>setupTourExample(2)}),
+ tStep('.setup-subject','O plano parte do seu momento.','Escolha o que já conhece, a prioridade, o primeiro assunto e um prazo opcional. A autoavaliação não cria acertos nem marca assuntos como aprendidos.',{prepare:()=>setupTourExample(3)}),
+ tStep('.setup-week','Dias livres são respeitados.','Marque os dias e horários disponíveis. Os outros ficam livres. Pausas, margem de tempo e compromissos existentes serão considerados na prévia.',{prepare:()=>setupTourExample(4)}),
+ tStep('#setup-plan-preview','Confira antes de salvar.','A prévia mostra blocos, datas, assuntos e os motivos das escolhas. Se a carga não couber, o guia avisa em vez de ocupar seu descanso. Tudo continua editável em Minha rotina.',{prepare:()=>setupTourExample(6),observeOnly:true})
+]};
+tourAreas.rotina={label:'Minha rotina',caption:'Editar respostas sem perder os estudos',steps:[
+ tStep('#routine-week','Sua disponibilidade pode mudar.','Use Ajustar horários ou Editar minhas respostas para rever o guia. A configuração usa os horários e disciplinas atuais como ponto de partida.'),
+ tStep('#routine-subjects','Ajuste o plano, preserve o histórico.','Ao salvar, você escolhe se atualiza os próximos blocos. Sem essa escolha, o planejamento permanece. Disciplinas retiradas são arquivadas, preservando estudos, notas e arquivos.')
+]};
+tourAreas.hoje.steps.unshift(tStep('#daily-home','Seu dia, antes de qualquer coisa.','Veja seu nome, dia da semana, data, próximos prazos e um próximo passo. As frases variam a cada dia e usam apenas seus registros reais. A ausência de registros não vira um desempenho inventado.'));

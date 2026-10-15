@@ -15,3 +15,13 @@ Leitura de mensagens novas e antigas com Markdown limitado, HTML escapado, lista
 Seção exclusiva Atividades e provas na barra lateral, com Pendentes, Provas, Entregues e Prioridades da NORBIT. Mesmos destinos na navegação do conteúdo para celular. Listas agrupadas por prazo, busca e disciplina visíveis; situação e espaço em filtros adicionais. Detalhes ocupam uma tela própria, com retorno mantendo os filtros. Cadastro mostra os campos essenciais primeiro e separa etapas, links e arquivos de esforço, situação e nota. Ao salvar, o registro abre para conferência. Ações rápidas permitem iniciar uma atividade, entregar ou marcar uma prova como realizada, com desfazer.
 
 Prioridades locais e análise da NORBIT ficam no destino próprio. O envio usa uma prévia legível e uma orientação opcional do aluno; o texto completo permanece consultável. Backup com anexos continua disponível em um grupo separado. Os registros e arquivos existentes mantêm seus formatos e identificadores.
+
+## Configuração guiada e rotina editável · 1.5.0
+
+Primeira entrada sem preparação abre um guia local de sete etapas: nome, objetivo, semestre/disciplinas, ponto de partida por disciplina, dias e horários, ritmo e prévia. Catálogo IFBA e modelos de programação, inglês e concurso são editáveis. O rascunho fica em chave local separada e os registros só mudam após confirmar a prévia. Não há pedidos de IA no guia.
+
+A geração distribui blocos de forma determinística conforme prioridade, nível declarado, prazo, assunto inicial, método, horários, pausas e margem de tempo. Evita aulas, blocos e compromissos importados existentes. Não cria resultados de estudo. Minha rotina permite editar todas as respostas; por padrão mantém o planejamento existente. Atualizar os próximos blocos exige escolha explícita, adia os registros substituídos e preserva blocos concluídos, sessões e vínculos. Disciplinas retiradas são arquivadas.
+
+Hoje destaca saudação com nome, dia da semana e data, mensagem diária baseada em registros reais, próximo bloco e prazos. Não presume desempenho quando não há amostra. Dias livres são reconhecidos. O tutorial usa um exemplo temporário e restaura o rascunho e os registros anteriores. A NORBIT só recebe preferências do guia quando o usuário envia uma mensagem com contexto ativado.
+
+Hoje organiza ferramentas secundárias em Praticar e revisar e Acompanhar meu progresso, mantendo o próximo passo e os prazos em evidência. Reflexões diárias locais selecionadas conforme dias livres, amostra de questões, prazos e registros dos últimos sete dias. Textos originais identificados; adaptações de Epicteto e Marco Aurélio indicam obra e fonte consultável. Sem novas chamadas à IA nem mudanças nos registros.
