@@ -25,3 +25,7 @@ A geração distribui blocos de forma determinística conforme prioridade, níve
 Hoje destaca saudação com nome, dia da semana e data, mensagem diária baseada em registros reais, próximo bloco e prazos. Não presume desempenho quando não há amostra. Dias livres são reconhecidos. O tutorial usa um exemplo temporário e restaura o rascunho e os registros anteriores. A NORBIT só recebe preferências do guia quando o usuário envia uma mensagem com contexto ativado.
 
 Hoje organiza ferramentas secundárias em Praticar e revisar e Acompanhar meu progresso, mantendo o próximo passo e os prazos em evidência. Reflexões diárias locais selecionadas conforme dias livres, amostra de questões, prazos e registros dos últimos sete dias. Textos originais identificados; adaptações de Epicteto e Marco Aurélio indicam obra e fonte consultável. Sem novas chamadas à IA nem mudanças nos registros.
+
+## Hierarquia e ações visíveis · 1.5.1
+
+Orientações locais da NORBIT usam identificação e superfície índigo; reflexão tem formato de citação, autoria e fonte; respostas da IA têm cabeçalho e superfície própria. Instruções da interface permanecem neutras. Hoje oferece atalhos diretos para registrar, planejar e ver pendências. Modos de tarefa da IA ficam visíveis, fora dos ajustes recolhidos. Ações secundárias têm contorno e área de toque. Linhas de assuntos refluem no celular para manter Detalhes acessível. Atalho da NORBIT na barra superior evita sobreposição aos controles de estudo. Guia e dados mantêm o funcionamento anterior.
