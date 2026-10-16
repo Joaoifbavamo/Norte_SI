@@ -10,7 +10,7 @@ const siteMotion = (() => {
  });
  spring[spring.length-1]={offset:1,opacity:1,transform:'translateY(0)'};
  function play(element,frames,options={}){
-  if(!element||!element.isConnected||preference.matches||document.hidden||typeof element.animate!=='function')return;
+  if(!element||!element.isConnected||(preference.matches||window.norteMotionReduced?.())||document.hidden||typeof element.animate!=='function')return;
   owners.get(element)?.cancel();
   const animation=element.animate(frames,{duration:340,easing:'linear',fill:'backwards',...options});
   owners.set(element,animation);
@@ -26,7 +26,7 @@ const siteMotion = (() => {
  function page(){
   const key=route+':'+(db.activeExam||'');
   const changed=key!==lastPage;lastPage=key;clear();
-  if(!changed||preference.matches||document.hidden||tour||route==='ia')return;
+  if(!changed||(preference.matches||window.norteMotionReduced?.())||document.hidden||tour||route==='ia')return;
   const content=$('#content');
   // Animate containers, never every row, nested panel or editable control.
   const candidates=[...content.querySelectorAll('.heading,.page-heading,.hero,.panel,.onboarding')].filter(el=>!el.parentElement.closest('.panel,.hero,.onboarding')&&!el.querySelector('form,input,select,textarea')).slice(0,60);

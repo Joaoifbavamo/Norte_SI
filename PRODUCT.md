@@ -1,5 +1,15 @@
 # Norte SI
 
+## Experiência de estudo · 1.7.0
+
+Liquid Glass suave nas barras, navegação e controles do cronômetro, ativado por padrão e desativável em Ajustes → Aparência e movimento. Conteúdo de estudo, respostas, questões e formulários mantêm superfícies sólidas. Preferências de contraste e transparência do sistema e falta de suporte mantêm a alternativa sólida. Movimento reduzido manual complementa a preferência do sistema, incluindo o mascote. Preferências locais entram no backup; uma mesclagem preserva a aparência atual.
+
+Chat com mensagens em rolagem própria e campo de mensagem acessível, inclusive em telas baixas. Opções de contexto e material ficam recolhidas; ações secundárias da resposta ficam em Mais ações. Mensagens sem mudanças preservam os elementos, rascunho e posição de leitura; disponibilidade da IA atualiza separadamente. Respostas podem originar atividades, materiais e cartões com vínculo de retorno à conversa. Itens removidos são sinalizados sem criar novos registros.
+
+Ajustes organizados em Aparência e movimento, Minha rotina, IA e privacidade, Dados e backup. Hoje concentra o próximo passo contextual e o registro de estudo. Cada disciplina oferece Conteúdos paginados, Atividades, Notas informadas e Frequência pessoal, sem assumir critérios institucionais de aprovação.
+
+Atividades oferecem filtros salvos e fluxo de reservar horário, iniciar foco e registrar o estudo real. Revisão semanal compara esforço estimado ainda sem reserva com horários livres dos próximos sete dias. Sugere blocos por prioridade, respeita compromissos, pausas e prazos, e só aplica após conferir a prévia. Não modifica reservas existentes, não cria estudo realizado e não marca entregas automaticamente. O ajuste de ritmo usa duração registrada como sugestão editável. Recursos locais não fazem chamadas ao modelo. Tutorial atualizado para 201 passos e testado com dados temporários.
+
 App independente para estudantes de Sistemas de Informação do IFBA Vitória da Conquista e aprendizado livre. Base Norte 4.1.0 preservada. O aluno escolhe ofertas por semestre letivo e informa separadamente o período do curso; repetir disciplinas cria novos registros em outro espaço. Sem contas ou sincronização automática. Dados locais e backup manual. Matrizes do hub são referência provisória; resultados, faltas e aproveitamentos são informados pelo usuário. Backend Gemini separado, configurado por segredo, sem reaproveitar cota ou credenciais do Norte.
 
 ## Atividades e leitura da NORBIT · 1.4.0
