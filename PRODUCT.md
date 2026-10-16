@@ -29,3 +29,7 @@ Hoje organiza ferramentas secundárias em Praticar e revisar e Acompanhar meu pr
 ## Hierarquia e ações visíveis · 1.5.1
 
 Orientações locais da NORBIT usam identificação e superfície índigo; reflexão tem formato de citação, autoria e fonte; respostas da IA têm cabeçalho e superfície própria. Instruções da interface permanecem neutras. Hoje oferece atalhos diretos para registrar, planejar e ver pendências. Modos de tarefa da IA ficam visíveis, fora dos ajustes recolhidos. Ações secundárias têm contorno e área de toque. Linhas de assuntos refluem no celular para manter Detalhes acessível. Atalho da NORBIT na barra superior evita sobreposição aos controles de estudo. Guia e dados mantêm o funcionamento anterior.
+
+## Sistema de layout e formulários · 1.6.0
+
+Contrato compartilhado para largura de leitura, cabeçalho opaco, áreas flexíveis, formulários, diálogos, conteúdo longo e telas baixas. Guia inicial em uma área de perguntas própria, sem barra superior sobreposta, sem rodapé flutuante sobre campos e com orientação compacta do mascote. Animação das etapas usa apenas opacidade; painéis que contêm formulários não recebem transformações de entrada. Foco de teclado preservado ao atualizar respostas e campos fora da área visível são reposicionados ao focar ou validar. No celular, histórico usa linhas empilhadas com nomes dos campos e Editar visível; nomes longos e navegações quebram linhas. Não modifica dados nem solicita IA.

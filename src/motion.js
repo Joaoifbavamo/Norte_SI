@@ -29,7 +29,7 @@ const siteMotion = (() => {
   if(!changed||preference.matches||document.hidden||tour||route==='ia')return;
   const content=$('#content');
   // Animate containers, never every row, nested panel or editable control.
-  const candidates=[...content.querySelectorAll('.heading,.page-heading,.hero,.panel,.onboarding')].filter(el=>!el.parentElement.closest('.panel,.hero,.onboarding')).slice(0,60);
+  const candidates=[...content.querySelectorAll('.heading,.page-heading,.hero,.panel,.onboarding')].filter(el=>!el.parentElement.closest('.panel,.hero,.onboarding')&&!el.querySelector('form,input,select,textarea')).slice(0,60);
   let visible=0;
   const reveal=element=>{play(element,spring,{delay:Math.min(visible++*24,72)});chart(element)};
   observer=new IntersectionObserver(entries=>{
@@ -40,7 +40,7 @@ const siteMotion = (() => {
  preference.addEventListener('change',()=>clear());
  document.addEventListener('visibilitychange',()=>{if(document.hidden)clear()});
  document.addEventListener('toggle',event=>{
-  if(event.target.matches('details[open]')){
+  if(event.target.matches('details[open]')&&!event.target.querySelector('input,select,textarea,form')){
    const body=event.target.querySelector(':scope > div,:scope > section,:scope > p');
    play(body,[{opacity:.5,transform:'translateY(-4px)'},{opacity:1,transform:'translateY(0)'}],{duration:200,easing:'ease-out'});
   }
