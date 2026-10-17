@@ -63,3 +63,7 @@ Planejamento dos assuntos até a prova com prévia e respeito à agenda; compara
 Laboratórios de teste de mesa, previsão de saída e identificação de bugs; SQLite real em Worker isolado, com JOIN, GROUP BY, consultas e banco reiniciável. SQL.js 1.15.0 e ICAL.js 2.2.1 são servidos localmente e carregados sob demanda; licenças MIT em assets/vendor. A IA preserva fonte e página informada ao enviar, permite explicações fixadas por assunto com versões e consulta cota sem consumir geração.
 
 O backend Cloudflare permanece na conta original e aceita ambos os domínios autorizados. Limites: 200 pedidos globais/dia, 100 por navegador/dia, 6 por navegador/minuto e 12 globais/minuto, com orçamento interno de 1.000.000 unidades estimadas. A cota do Google é independente. O identificador de navegador é local e anônimo; não é uma conta ou sincronização.
+
+## Verificação de layout
+
+Com Node.js e npm: execute `npm install`, `npx playwright install chromium`, `npm run build` e `npm run test:layout`. O teste usa dados temporários em um navegador isolado e verifica cinco larguras, ambos os temas, nomes do percurso, filtros e tutorial. Opcionalmente, `CHROME_PATH` indica um Chrome instalado e `PLAYWRIGHT_MODULE_PATH` indica uma instalação existente de Playwright.

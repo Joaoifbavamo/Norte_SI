@@ -25,3 +25,14 @@ Preservar movimentos finitos e interrompíveis, mascote original e preferência 
 
 ## Verificação
 Rotas verificadas em 1440, 390 e 320 px nos dois temas; fluxos de configuração, sessões, atividades/anexos, backups e IA simulada. Tutorial usa dados temporários e conserva seus alvos completos durante a demonstração. Esta revisão não garante ausência de defeitos em toda combinação possível de dados e navegador.
+## Correções responsivas · 1.11
+
+Dez destinos na navegação principal e Como usar/Ajustes fixos no rodapé lateral. Abas relacionadas têm rolagem horizontal local no celular. Hierarquia de títulos, descrições, botões e listas compactada; mantém temas claro e escuro opacos, identidade Enlace e movimentos existentes.
+
+Percurso usa grade explícita para reservar espaço aos nomes e ao seletor de situação; no celular, empilha os controles. Corrigida a especificidade de uma regra genérica de formulários que deixava nomes com largura zero. Filtros do banco começam recolhidos, preservam sua abertura durante alterações e apresentam cadernos junto da organização. Coleção vazia não apresenta contadores redundantes.
+
+Tutorial segue a mesma navegação da interface real. A caixa tem altura limitada, texto rolável e controles acessíveis; posicionamento evita sobrepor o destaque, inclusive em telas estreitas. Abre seções que contêm o alvo. Dados de demonstração continuam separados dos registros reais.
+
+Referências adicionais: [NN/g, Progressive Disclosure](https://www.nngroup.com/articles/progressive-disclosure/) para filtros secundários; [GOV.UK, Accordion](https://design-system.service.gov.uk/components/accordion/) para agrupamento e abertura de conteúdo relacionado.
+
+Verificação: 33 áreas com detalhes abertos em quatro larguras; percurso, filtros e tutorial em cinco larguras e ambos os temas. Teste reproduzível em scripts/test-layout.mjs cobre nomes comprimidos, estado de filtros, geometria do tutorial e preservação dos registros.

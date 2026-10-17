@@ -63,3 +63,7 @@ Orientações locais da NORBIT usam identificação e superfície índigo; refle
 ## Sistema de layout e formulários · 1.6.0
 
 Contrato compartilhado para largura de leitura, cabeçalho opaco, áreas flexíveis, formulários, diálogos, conteúdo longo e telas baixas. Guia inicial em uma área de perguntas própria, sem barra superior sobreposta, sem rodapé flutuante sobre campos e com orientação compacta do mascote. Animação das etapas usa apenas opacidade; painéis que contêm formulários não recebem transformações de entrada. Foco de teclado preservado ao atualizar respostas e campos fora da área visível são reposicionados ao focar ou validar. No celular, histórico usa linhas empilhadas com nomes dos campos e Editar visível; nomes longos e navegações quebram linhas. Não modifica dados nem solicita IA.
+
+## Interface responsiva · 1.11
+
+Percurso mantém os nomes das matérias legíveis e controles empilhados no celular. Banco abre com busca e filtros opcionais; alterar um filtro mantém o painel aberto. Como usar e Ajustes ficam no rodapé da navegação. Tutorial acompanha a interface atual e mantém os botões acessíveis sem cobrir o destaque. Alterações de apresentação, sem migração de dados ou consumo adicional de IA.

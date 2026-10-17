@@ -37,12 +37,13 @@ const workspaceHelp={
 const workspaceParent={provas:'atividades',entregas:'atividades',prioridades:'atividades',semestre:'faculdade',edital:'faculdade',assuntos:'faculdade',disciplina:'faculdade',percurso:'faculdade',projetos:'faculdade',academico:'faculdade',questoes:'banco',simulados:'banco',revisoes:'banco',cartoes:'banco',jornada:'sessoes',foco:'sessoes',historico:'evolucao',prazos:'atividades',rotina:'ajustes',comecar:'ajustes',calendario:'plano'};
 const workspaceNavBefore=renderSidebar;
 renderSidebar=function(...args){
- if(tour||!exam())return workspaceNavBefore(...args);
+ if(!exam())return workspaceNavBefore(...args);
  const previous=sidebarGroups.map(([label,items])=>[label,[...items]]);
  sidebarGroups.splice(0,sidebarGroups.length,['Meu dia',['hoje','plano','atividades']],['Meus estudos',['faculdade','livres','sessoes','banco','biblioteca']],['Assistência e progresso',['ia','evolucao']],['Preferências',['guia','ajustes']]);
  try{workspaceNavBefore(...args)}finally{sidebarGroups.splice(0,sidebarGroups.length,...previous)}
  const labels={atividades:'Atividades e provas',banco:'Praticar questões',ia:'Conversar com NORBIT',guia:'Como usar',evolucao:'Meu progresso'};
  for(const a of document.querySelectorAll('#nav a')){const key=a.hash.slice(1);if(labels[key])a.querySelector('.nav-label').textContent=labels[key];a.title=workspaceHelp[key]?.[1]||studyLabel(key);if(workspaceParent[route]===key){a.classList.add('active');a.setAttribute('aria-current','location')}}
+ const bottom=$('.sidebar-bottom');bottom.querySelector('.workspace-preferences')?.remove();const preferences=document.createElement('div');preferences.className='workspace-preferences';preferences.setAttribute('role','navigation');preferences.setAttribute('aria-label','Ajuda e ajustes');for(const key of ['guia','ajustes']){const link=$('#nav a[href="#'+key+'"]');if(link)preferences.append(link)}bottom.prepend(preferences);for(const group of document.querySelectorAll('#nav .nav-group'))if(!group.querySelector('a'))group.remove();
 };
 let workspaceHelpRoute='';
 actions['workspace-help']=button=>{const panel=$('#workspace-instructions'),open=button.getAttribute('aria-expanded')!=='true';if(!panel)return;panel.hidden=!open;button.setAttribute('aria-expanded',String(open));button.textContent=open?'Ocultar orientação':'Como usar esta página';workspaceHelpRoute=open?route:'';if(open)siteMotion.play(panel,[{opacity:.5,transform:'translateY(-4px)'},{opacity:1,transform:'none'}],{duration:180});};
@@ -61,4 +62,5 @@ render=function(){const result=workspaceRenderBefore();document.body.dataset.wor
  for(const node of content.querySelectorAll('.empty'))node.classList.add('workspace-empty');
  return result;
 };
-for(const [key,area] of Object.entries(tourAreas)){if(area.steps?.[0]&&workspaceHelp[key])area.steps[0].body+=' Fora do tutorial, use “Como usar esta página” para consultar três passos rápidos. A barra lateral reúne as áreas principais; as abas da página mostram as ferramentas relacionadas.'}
+tourAreas.hoje.steps[0].body='Use Registrar estudo para salvar o tempo e os resultados do que você estudou. Planejamento e pendências ficam nas abas acima.';
+tourAreas.provas.steps[0].body='Abra Atividades e provas na barra lateral. Aqui, as abas separam pendências, provas, entregas e prioridades.';
