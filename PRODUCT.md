@@ -1,5 +1,9 @@
 # Norte SI
 
+## Hierarquia visual global · 1.9.0
+
+Revisão dos temas claro e escuro, navegação, painéis, listas, chat, formulários, diálogos e configurações, sem mudança do formato de dados. Início agrupa objetivo e prazos; registro fica junto à saudação. Ritmo e orientação complementar continuam disponíveis em detalhes identificados por texto, sem setas giratórias. Reflexão é apresentada separadamente das instruções da NORBIT. Aberturas de detalhes têm transições breves e respeitam movimento reduzido. O tutorial mantém seus controles originais acessíveis durante a prática.
+
 ## Estudos por intenção · 1.8.0
 
 Superfícies sólidas em todos os temas: Liquid Glass removido, incluindo seu controle. Backups antigos que contêm a preferência de vidro continuam aceitos, sem reativar o efeito. Movimento reduzido permanece.
