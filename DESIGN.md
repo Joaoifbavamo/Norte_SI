@@ -1,17 +1,27 @@
-# Sistema visual
+# Sistema visual — Norte SI 1.10
 
-Direção atual 1.9.0: revisão global da hierarquia em Operate, preservando Enlace. Claro com fundo cinza frio, superfície branca e texto azul-carvão; escuro com fundo profundo, painéis azul-ardósia e campos mais escuros delimitados. Índigo reservado a seleção, foco e ação principal. Orientação da NORBIT recebe identificação e superfície própria; reflexão usa papel quente e serifada de leitura. Texto comum e controles não compartilham a mesma apresentação.
+## Intenção
+Modo Operate: localizar uma área, entender a próxima ação e estudar sem competir com a navegação. Identidade Enlace e mascote Mochi preservados. A aparência serve tarefas reais; não é uma landing page. Dados, formatos de backup, ações de estudo e proteção da IA permanecem intactos.
 
-Início em composição de objetivo e prazos, com saudação compacta, registro próximo ao título, reflexão independente e orientação complementar sob demanda. Detalhes usam controles textuais Ver detalhes/Fechar em lugar de setas giratórias. Listas, campos, painéis, botões, chat, diálogos, navegação e Ajustes compartilham tokens e estados nos dois temas. Animações breves, interrompíveis, sem atrasar entradas; redução de movimento tem prioridade.
+## Referências consultadas
+- Linear, A calmer interface for a product in motion: https://linear.app/now/behind-the-latest-design-refresh — hierarquia de barras, navegação discreta e posições previsíveis.
+- Things: https://culturedcode.com/things/ — foco no dia e listas legíveis.
+- Notion, Navigate with the sidebar: https://www.notion.com/help/navigate-with-the-sidebar — separação entre navegação e conteúdo.
+São referências de organização; nenhum código ou ativo dessas interfaces foi copiado.
 
-Direção atual 1.8.0: superfícies sólidas, sem Liquid Glass, mantendo identidade Enlace e temas existentes. Hoje usa uma pergunta contextual e divulgação progressiva, com no máximo três caminhos iniciais; o guia pode ser recolhido. Não duplicar atalhos de planejamento e pendências ao redor da pergunta. Faculdade e Sessões usam listas e separadores, não mosaicos de cartões. A seleção de foco é uma lente sobre o catálogo; recursos completos continuam acessíveis por contexto. Instrução local e resposta de IA têm identificação distinta. O envio à IA é explícito e revisável. Som final curto e harmônico, com controle do usuário e sem reprodução automática de prévias.
+## Navegação
+Doze destinos principais distribuídos entre Meu dia, Meus estudos, Assistência e progresso e Preferências. Provas, Entregues e Prioridades pertencem a Atividades e provas, com abas também nos detalhes de uma atividade. O destino principal continua marcado quando uma subárea está aberta. Faculdade e Sessões têm ferramentas relacionadas próximas ao conteúdo. Busca global e tutorial continuam acessíveis.
 
-Experiência 1.7.0: Liquid Glass como camada de orientação nas barras e navegação, com desfoque estático limitado e bordas sutis. Sem filtros em leitura ou formulários. Ajustes oferecem alternativa sólida imediata e redução de movimento manual; acessibilidade do sistema tem prioridade. Usar superfícies sólidas em navegadores sem suporte. Não animar blur nem criar refração contínua.
+## Composição
+Barra superior de 64 px, coluna lateral de 224 px e conteúdo com largura máxima de 1180 px. Títulos diretos e descrições do propósito. Orientações em três passos são opcionais, acionadas por Como usar esta página, sem novas chamadas de IA. Configuração guiada e conversa conservam seus próprios fluxos de orientação.
 
-Chat ocupa a altura visível, mantém mensagens em rolagem própria e o campo de mensagem fora dessa rolagem. Detalhes secundários usam divulgação progressiva, com acesso no teclado. Seletores de seções usam indicador finito; estados reduzidos não animam. Preferências e seleções são locais. Hoje enfatiza uma ação contextual; disciplinas reúnem conteúdo e compromissos; prévias semanais mantêm a distinção entre planejamento e realização.
+Hoje organiza saudação, decisão e prazos. Reflexão tem tipografia de citação e superfície quente; NORBIT tem autoria identificada e tom discreto. Ações permanecem controles reconhecíveis. Listas usam separação de linhas, evitando cartões dentro de cartões. Detalhes usam Mostrar/Ocultar sem setas giratórias.
 
-Identidade Enlace, direção B escolhida em 14/10/2026: símbolo de dois caminhos interligados, nome em contornos originais, índigo #4545A5 e superfícies de papel. Temas claros e escuros compartilham a mesma hierarquia. Fonte de sistema para leitura, proporções, ícones de traço e espaçamento consistente. Modo Operate nos painéis e formulários; Read na central acadêmica. Navegação principal compacta e destinos relacionados em navegação contextual. Listas para disciplinas, referências e tarefas; evitar grade de cartões repetidos. O mascote da NORBIT usa o Mochi original do Coucou em Canvas transparente: código MIT de Louis-CFM, estados e reações finitas, ocultável e pausado fora de vista. Sem ilha, janela, vídeos ou galeria. Animações nativas sem atraso de entrada e com redução de movimento. Formulários seguem modal nativo e validação localizada. Preservar funcionalidades e dados ao atualizar a identidade.
+## Componentes e temas
+Claro usa branco e cinza neutro; escuro usa carvão e superfícies distintas. Índigo reservado a foco, seleção e ações. Formulários com labels, contornos e espaços consistentes. Filtros se empilham no celular; campos de busca reservam espaço para a lupa. Botões, tags, tabelas, estados vazios, diálogos, abas, leitura de respostas e listas partilham regras em workspace-design.css. Conteúdo e links longos podem quebrar; código e tabelas têm rolagem própria quando necessário.
 
-Hierarquia de leitura refinada em 15/10/2026: instrução neutra, orientação local da NORBIT identificada em índigo, reflexão como citação com autoria e respostas geradas por IA identificadas em superfície própria. Controles têm forma e contorno; ações principais ficam perto do início. Atalho global da IA integra a barra superior para não cobrir ações do conteúdo. Tipografia e espaçamento diferenciam função e origem sem depender apenas da cor.
+## Movimento e acesso
+Preservar movimentos finitos e interrompíveis, mascote original e preferência por movimento reduzido. Orientações abrem com transição breve. Foco visível e elementos nativos; atalhos não dependem de hover. Nenhum vidro, blur decorativo ou animação infinita adicionada.
 
-Contrato de layout 1.6.0: largura máxima e margens compartilhadas; cabeçalhos opacos e limites de rolagem previsíveis. Configuração guiada usa fluxo natural, perguntas em uma superfície própria e orientação compacta ao lado ou acima. Nenhum formulário depende de transformações ou filtros animados. Diálogos respeitam a altura visível, campos preservam foco ao atualizar e tabelas de histórico se tornam registros empilhados no celular. Navegação contextual permite quebra de linha. Identidade e origem dos textos continuam distintas.
+## Verificação
+Rotas verificadas em 1440, 390 e 320 px nos dois temas; fluxos de configuração, sessões, atividades/anexos, backups e IA simulada. Tutorial usa dados temporários e conserva seus alvos completos durante a demonstração. Esta revisão não garante ausência de defeitos em toda combinação possível de dados e navegador.

@@ -1,5 +1,9 @@
 # Norte SI
 
+## Organização por tarefa · 1.10.0
+
+Navegação com doze destinos principais e ferramentas relacionadas nas abas de cada área. Atividades e provas reúne Pendentes, Provas, Entregues e Prioridades, inclusive quando um detalhe está aberto. Faculdade e Sessões recebem acessos contextuais. As páginas têm títulos e descrições diretos, com orientação opcional em três passos e acesso ao tutorial. Configuração guiada e chat mantêm orientação própria. Temas neutros, listas e controles consistentes substituem o excesso de superfícies e bordas. Busca de questões reserva espaço para a lupa e filtros se empilham no celular. Nenhuma migração de dados, serviço de autenticação ou alteração de cota foi realizada.
+
 ## Hierarquia visual global · 1.9.0
 
 Revisão dos temas claro e escuro, navegação, painéis, listas, chat, formulários, diálogos e configurações, sem mudança do formato de dados. Início agrupa objetivo e prazos; registro fica junto à saudação. Ritmo e orientação complementar continuam disponíveis em detalhes identificados por texto, sem setas giratórias. Reflexão é apresentada separadamente das instruções da NORBIT. Aberturas de detalhes têm transições breves e respeitam movimento reduzido. O tutorial mantém seus controles originais acessíveis durante a prática.
