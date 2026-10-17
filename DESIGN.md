@@ -1,5 +1,7 @@
 # Sistema visual
 
+Direção atual 1.8.0: superfícies sólidas, sem Liquid Glass, mantendo identidade Enlace e temas existentes. Hoje usa uma pergunta contextual e divulgação progressiva, com no máximo três caminhos iniciais; o guia pode ser recolhido. Não duplicar atalhos de planejamento e pendências ao redor da pergunta. Faculdade e Sessões usam listas e separadores, não mosaicos de cartões. A seleção de foco é uma lente sobre o catálogo; recursos completos continuam acessíveis por contexto. Instrução local e resposta de IA têm identificação distinta. O envio à IA é explícito e revisável. Som final curto e harmônico, com controle do usuário e sem reprodução automática de prévias.
+
 Experiência 1.7.0: Liquid Glass como camada de orientação nas barras e navegação, com desfoque estático limitado e bordas sutis. Sem filtros em leitura ou formulários. Ajustes oferecem alternativa sólida imediata e redução de movimento manual; acessibilidade do sistema tem prioridade. Usar superfícies sólidas em navegadores sem suporte. Não animar blur nem criar refração contínua.
 
 Chat ocupa a altura visível, mantém mensagens em rolagem própria e o campo de mensagem fora dessa rolagem. Detalhes secundários usam divulgação progressiva, com acesso no teclado. Seletores de seções usam indicador finito; estados reduzidos não animam. Preferências e seleções são locais. Hoje enfatiza uma ação contextual; disciplinas reúnem conteúdo e compromissos; prévias semanais mantêm a distinção entre planejamento e realização.

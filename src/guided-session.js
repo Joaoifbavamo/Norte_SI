@@ -11,9 +11,9 @@ function startGuided(){
  if(connected().guided)return go('jornada');
  if(!exam()?.subjects.some(s=>!s.archived&&s.topics.length))return toast('Adicione uma disciplina com assuntos para começar.');
  const recommendation=recommendations()[0],sid=subject(studySubjectId)?studySubjectId:recommendation?.s.id,tid=topic(sid,studyTopicId)?studyTopicId:sid===recommendation?.s.id?recommendation.t.id:subject(sid)?.topics[0]?.id;
- modal('Seu próximo bloco de estudo','Um assunto, um objetivo e tempo para praticar.',`<div class="form-grid">${selection(sid,tid)}<label>Tempo disponível<select name="minutes">${[10,15,25,45].map(n=>`<option ${n===25?'selected':''}>${n}</option>`).join('')}</select></label><label>Questões do banco<select name="count">${[1,3,5].map(n=>`<option ${n===3?'selected':''}>${n}</option>`).join('')}</select></label><label class="full">O que quero conseguir explicar?<input name="goal" maxlength="500" placeholder="Ex.: explicar quando usar uma chave estrangeira"></label><p class="form-help full">Usa questões que você já guardou. Nenhum pedido à IA é feito. Você pode pausar e retomar.</p></div>`,'Preparar sessão',d=>{
+ modal('Seu próximo bloco de estudo','Um assunto, um objetivo e tempo para praticar.',`<div class="form-grid">${selection(sid,tid)}<label>Tempo disponível<select name="minutes">${[10,15,25,30,45,60].map(n=>`<option ${n===25?'selected':''}>${n}</option>`).join('')}</select></label><label>Questões do banco<select name="count">${[1,3,5].map(n=>`<option ${n===3?'selected':''}>${n}</option>`).join('')}</select></label><label class="full">O que quero conseguir explicar?<input name="goal" maxlength="500" placeholder="Ex.: explicar quando usar uma chave estrangeira"></label><p class="form-help full">Usa questões que você já guardou. Nenhum pedido à IA é feito. Você pode pausar e retomar.</p></div>`,'Preparar sessão',d=>{
   if(!topic(d.subjectId,d.topicId)||subject(d.subjectId).archived)throw Error('Escolha uma disciplina ativa e um assunto.');
-  if(![10,15,25,45].includes(+d.minutes)||![1,3,5].includes(+d.count))throw Error('Confira a duração e a quantidade.');
+  if(![10,15,25,30,45,60].includes(+d.minutes)||![1,3,5].includes(+d.count))throw Error('Confira a duração e a quantidade.');
   const questions=studio().bank.filter(q=>q.subjectId===d.subjectId&&q.topicId===d.topicId).slice().sort((a,b)=>{const seen=q=>studio().attempts.filter(attempt=>attempt.questions.some(x=>x.id===q.id)).length;return seen(a)-seen(b)}).slice(0,+d.count);
   writeConnected().guided={id:id(),sid:d.subjectId,tid:d.topicId,step:0,minutes:+d.minutes,startedAt:Date.now(),activeMs:0,goal:d.goal.trim(),recall:'',reflection:'',questionIndex:0,questions:clone(questions),choices:questions.map(()=>null),grades:questions.map(()=>null)};
   closeModal();commit('Sessão preparada.');go('jornada');
@@ -42,7 +42,7 @@ function guidedRegister(){
 }
 Object.assign(actions,{
  'guided-start':b=>{if(b?.dataset?.sid){studySubjectId=b.dataset.sid;studyTopicId=b.dataset.tid}startGuided()},'guided-register':guidedRegister,
- 'guided-step':b=>{guidedSaveInputs();const g=connected().guided,n=+b.dataset.step;if(!g||!Number.isInteger(n)||n<0||n>4)return;if(g.step===0&&n===1)guidedRun();if(n===4)guidedFlush();g.step=n;persist();render();$('#guided-stage')?.focus({preventScroll:true});$('#guided-stage')?.scrollIntoView({block:'nearest',behavior:'instant'})},
+ 'guided-step':b=>{guidedSaveInputs();const g=connected().guided,n=+b.dataset.step;if(!g||!Number.isInteger(n)||n<0||n>4)return;if(g.step===0&&n===1){if(!g.goal?.trim())return toast('Defina um objetivo curto antes de começar.');guidedRun();}if(n===4)guidedFlush();g.step=n;persist();render();$('#guided-stage')?.focus({preventScroll:true});$('#guided-stage')?.scrollIntoView({block:'nearest',behavior:'instant'})},
  'guided-question':b=>{const g=connected().guided,i=+b.dataset.index;if(g&&Number.isInteger(i)&&i>=0&&i<g.questions.length){g.questionIndex=i;persist();render()}},
  'guided-clock':()=>{if(guidedClock)guidedFlush();else guidedRun();render()},
  'guided-leave':()=>{guidedSaveInputs();guidedFlush();go('hoje')},

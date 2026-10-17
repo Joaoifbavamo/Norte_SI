@@ -1,5 +1,17 @@
 # Norte SI
 
+## Estudos por intenção · 1.8.0
+
+Superfícies sólidas em todos os temas: Liquid Glass removido, incluindo seu controle. Backups antigos que contêm a preferência de vidro continuam aceitos, sem reativar o efeito. Movimento reduzido permanece.
+
+Hoje pergunta “O que você quer fazer hoje?” em um guia recolhível: estudar um assunto, organizar pendências ou encontrar uma função. O guia mostra poucas opções a cada etapa e abre os destinos reais do aplicativo. A orientação local é identificada; pedidos personalizados abrem um rascunho de conversa com NORBIT AI, com resumo legível do espaço e sem anexos. O usuário confere e envia pela proteção e cota existentes. Atalhos verificados permanecem disponíveis na conversa; respostas não executam ações ou alteram a agenda.
+
+Faculdade reúne somente o semestre selecionado, disciplinas em andamento e uma fila de assuntos escolhidos. A fila referencia o catálogo existente, pode ser reordenada ou reduzida e não apaga conteúdos. Gerenciar semestre mantém todas as ferramentas acadêmicas. Estudos livres continuam separados. Sessões de estudo oferece 15, 30 ou 60 minutos, além das durações anteriores no preparo, retomada do rascunho e referência ao próximo passo da última sessão registrada.
+
+A sessão guiada mantém lembrar, questões, correção e registro explícito. Acrescenta material opcional consultável sem sair, objetivo antes de iniciar, dificuldade declarada e próximo passo ao concluir. A dúvida abre a NORBIT com assunto, objetivo e tentativa; o rascunho permanece guardado. Pausar ou sair não cria histórico. Dificuldade e tempo não comprovam domínio. Dados opcionais entram no backup sem migrar ou excluir registros anteriores; conflitos de seleção na mesclagem continuam explícitos.
+
+Som de conclusão com quatro notas de sino, ataque suave e decaimento natural; lembrete mais curto. Síntese local sem baixar áudio, controle de volume e teste do som final. Permissão de áudio do navegador, suspensão do aparelho e volume do sistema continuam condicionando a reprodução. Tutorial inclui guia, faculdade, sessões e volume.
+
 ## Experiência de estudo · 1.7.0
 
 Liquid Glass suave nas barras, navegação e controles do cronômetro, ativado por padrão e desativável em Ajustes → Aparência e movimento. Conteúdo de estudo, respostas, questões e formulários mantêm superfícies sólidas. Preferências de contraste e transparência do sistema e falta de suporte mantêm a alternativa sólida. Movimento reduzido manual complementa a preferência do sistema, incluindo o mascote. Preferências locais entram no backup; uma mesclagem preserva a aparência atual.
